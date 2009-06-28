@@ -3,4 +3,4 @@ name = Simple theme switcher
 description = Allows switching between a limited set of themes using simple menu items.
 
 core = 6.x
-version = 6.x-1.0-dev
+version = 6.x-1.0-alpha1
