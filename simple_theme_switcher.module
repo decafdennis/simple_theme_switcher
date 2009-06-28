@@ -1,0 +1,28 @@
+<?php
+// Developed by Dennis Stevense, naquah.net
+
+function simple_theme_switcher_menu() {
+  $items = array();
+  
+  $items['theme/switch/%'] = array(
+    'access arguments' => array('use simple theme switcher'),
+    'page callback' => 'simple_theme_switcher_switch',
+    'page arguments' => array(2),
+    'file' => 'simple_theme_switcher.pages.inc',
+  );
+  
+  $items['admin/settings/simple_theme_switcher'] = array(
+    'title' => 'Simple theme switcher',
+    'description' => 'Configure the simple theme switcher module.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('simple_theme_switcher_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'simple_theme_switcher.pages.inc',
+  );
+  
+  return $items;
+}
+
+function simple_theme_switcher_perm() {
+  return array('use simple theme switcher');
+}
